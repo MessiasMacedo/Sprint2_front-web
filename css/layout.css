@@ -112,3 +112,9 @@ nav ul li a:hover {
 }
 
 .feature-list li strong { color: #033392; }
+
+.section-blue { background: #033392; }
+.section-blue .text h2 { color: #fff; }
+
+.feature-list-white li { background: rgba(255,255,255,0.1); border-left-color: #fff; color: #fff; }
+.feature-list-white li strong { color: #fff; }
