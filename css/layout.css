@@ -59,4 +59,11 @@ nav ul li a:hover {
 }
 
 .hero-content h2 { font-size: 70px; margin-bottom: 20px; }
-.hero-content p  { font-size: 22px; max-width: 800px; line-height: 1.6; margin: 0 auto; }
+.hero-content p  { font-size: 22px; max-width: 800px; line-height: 1.6; margin: 0 auto; }]
+
+.section { width: 100%; padding: 120px 10%; }
+
+.block { margin-bottom: 80px; }
+
+.text h2 { font-size: 36px; color: #033392; margin-bottom: 10px; }
+.text p  { font-size: 18px; line-height: 1.8; color: #333; margin-bottom: 30px; }
