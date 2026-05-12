@@ -118,3 +118,16 @@ nav ul li a:hover {
 
 .feature-list-white li { background: rgba(255,255,255,0.1); border-left-color: #fff; color: #fff; }
 .feature-list-white li strong { color: #fff; }
+
+footer {
+  background: #033392;
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+}
+
+footer h2 { font-size: 18px; font-weight: normal; margin-bottom: 30px; }
+
+.logos { display: flex; justify-content: center; align-items: center; gap: 60px; flex-wrap: wrap; }
+
+.logos img { width: 150px; height: 150px; object-fit: contain; padding: 15px; border-radius: 20px; }
