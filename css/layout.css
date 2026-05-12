@@ -59,7 +59,7 @@ nav ul li a:hover {
 }
 
 .hero-content h2 { font-size: 70px; margin-bottom: 20px; }
-.hero-content p  { font-size: 22px; max-width: 800px; line-height: 1.6; margin: 0 auto; }]
+.hero-content p  { font-size: 22px; max-width: 800px; line-height: 1.6; margin: 0 auto; }
 
 .section { width: 100%; padding: 120px 10%; }
 
@@ -67,3 +67,35 @@ nav ul li a:hover {
 
 .text h2 { font-size: 36px; color: #033392; margin-bottom: 10px; }
 .text p  { font-size: 18px; line-height: 1.8; color: #333; margin-bottom: 30px; }
+
+.compare { display: flex; gap: 30px; }
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card img {
+  width: 100%;
+  max-width: 240px;
+  border-radius: 20px;
+  border: 3px solid #e0e0e0;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 5px 14px;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.tag-antes  { background: #fde8e8; color: #c0392b; border: 2px solid #c0392b; }
+.tag-depois { background: #e8f8ee; color: #1a7a3e; border: 2px solid #1a7a3e; }
