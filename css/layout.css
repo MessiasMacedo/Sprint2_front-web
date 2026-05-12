@@ -99,3 +99,16 @@ nav ul li a:hover {
 
 .tag-antes  { background: #fde8e8; color: #c0392b; border: 2px solid #c0392b; }
 .tag-depois { background: #e8f8ee; color: #1a7a3e; border: 2px solid #1a7a3e; }
+.feature-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+
+.feature-list li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  background: #f4f7ff;
+  border-left: 5px solid #033392;
+  padding: 12px 18px;
+  border-radius: 8px;
+}
+
+.feature-list li strong { color: #033392; }
