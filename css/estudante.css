@@ -27,9 +27,14 @@
     }
 
     nav h1{
-      color:#fff;
+      
       font-size:32px;
       letter-spacing:2px;
+      text-decoration: none;
+    }
+      nav h1 a{
+      color:#fff;
+      text-decoration: none;
     }
 
     nav ul{

@@ -1,0 +1,305 @@
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0ede6;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    /* ── CARD ── */
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: #faf8f4;
+      border-radius: 28px;
+      padding: 36px 32px 40px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.10);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* wave decoration at bottom */
+    .card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 80px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 80'%3E%3Cpath d='M0 40 Q52 10 105 40 Q157 70 210 40 Q262 10 315 40 Q367 70 420 40 L420 80 L0 80Z' fill='%23e8e3d8' opacity='0.5'/%3E%3Cpath d='M0 55 Q52 25 105 55 Q157 85 210 55 Q262 25 315 55 Q367 85 420 55 L420 80 L0 80Z' fill='%23ddd8cc' opacity='0.4'/%3E%3C/svg%3E") no-repeat bottom/cover;
+      pointer-events: none;
+    }
+
+    /* ── BADGE ── */
+    .badge {
+      position: absolute;
+      top: 24px; right: 24px;
+      background: #033392;
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 5px 11px;
+      border-radius: 20px;
+      text-transform: uppercase;
+    }
+
+    /* ── HEADER ── */
+    .header h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    .header h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1;
+      color: #033392;
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    /* ── PROGRESS ── */
+    .progress-bar {
+      width: 100%;
+      height: 4px;
+      background: #e0dbd0;
+      border-radius: 4px;
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: #033392;
+      border-radius: 4px;
+      transition: width 0.4s ease;
+      width: 0%;
+    }
+
+    /* ── PERGUNTA ── */
+    .pergunta-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #033392;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
+    }
+
+    #pergunta {
+      font-size: 17px;
+      font-weight: 600;
+      color: #033392;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    /* ── RESPOSTAS ── */
+    #respostas {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .resposta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      padding: 13px 16px;
+      border: 2px solid #e0dbd0;
+      border-radius: 14px;
+      background: white;
+      cursor: pointer;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      color: #333;
+      text-align: left;
+      transition: border-color 0.2s, background 0.2s, transform 0.15s;
+    }
+
+    .resposta::before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      border: 2px solid #bbb;
+      border-radius: 50%;
+      flex-shrink: 0;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .resposta:hover {
+      border-color: #033392;
+      background: #eef3ff;
+      transform: translateX(2px);
+    }
+
+    .resposta:hover::before {
+      border-color: #033392;
+      background: #033392;
+    }
+
+    .resposta.selected {
+      border-color: #033392;
+      background: #eef3ff;
+    }
+
+    .resposta.selected::before {
+      border-color: #033392;
+      background: #033392;
+    }
+
+    /* ── SAIR LINK ── */
+    .sair {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #033392;
+      text-decoration: underline;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ── RESULTADO ── */
+    .resultado {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .resultado.show { display: block; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .resultado-tag {
+      display: inline-block;
+      background: #033392;
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+
+    .resultado h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 34px;
+      font-weight: 800;
+      color: #033392;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .resultado .perfil-txt {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .resultado h3 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #333;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      margin-bottom: 12px;
+    }
+
+    .modos-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+
+    .modo-chip {
+      background: white;
+      border: 2px solid #e0dbd0;
+      border-radius: 10px;
+      padding: 7px 13px;
+      font-size: 13px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .pontuacao {
+      background: white;
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+
+    .pontuacao h3 {
+      margin-bottom: 10px;
+    }
+
+    .barra-item {
+      margin-bottom: 10px;
+    }
+
+    .barra-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 4px;
+    }
+
+    .barra-track {
+      height: 6px;
+      background: #e8e3d8;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .barra-fill {
+      height: 100%;
+      background: #033392;
+      border-radius: 6px;
+      transition: width 0.6s ease;
+    }
+
+    .btn-refazer {
+      width: 100%;
+      padding: 14px;
+      background: #033392;
+      color: white;
+      border: none;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-refazer:hover {
+      background: #022270;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 460px) {
+      .card { padding: 28px 20px 36px; }
+      .header h2 { font-size: 38px; }
+    }

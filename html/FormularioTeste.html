@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário Inteligente</title>
+ 
+  <link rel="stylesheet" href="../css/teste.css">
+</head>
+<body>
+
+<div class="card">
+
+  <span class="badge">jovi</span>
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Ola!! Bem vindo ao</h1>
+    <h2>Formulário<br>Inteligente</h2>
+    <p class="intro">
+      Você já vai para a câmera, mas antes queremos entender o que você gosta
+      para personalizar os modos do seu jeito.
+    </p>
+  </div>
+
+  <!-- PROGRESS BAR -->
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+
+  <!-- PERGUNTA BOX -->
+  <div id="perguntaBox">
+    <p class="pergunta-label" id="perguntaLabel">Pergunta 1:</p>
+    <h3 id="pergunta"></h3>
+    <div id="respostas"></div>
+    <button class="sair" onclick="sair()">Sair do formulário</button>
+  </div>
+
+  <!-- RESULTADO -->
+  <div id="resultado" class="resultado"></div>
+
+</div>
+
+<script src="../js/formulario.js"></script>
+</body>
+</html>
