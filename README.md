@@ -2,9 +2,27 @@
 
 ## 📖 Descrição do Projeto
 
-O projeto **JOVI – Câmera Inteligente e Adaptável** foi desenvolvido com o objetivo de criar uma experiência de câmera mais personalizada, moderna e intuitiva para diferentes perfis de usuários.
+Este projeto foi desenvolvido com o objetivo de apresentar a proposta da **JOVI – Câmera Inteligente e Adaptável** através de um site interativo e explicativo, criado utilizando tecnologias de desenvolvimento web.
 
-A proposta principal do sistema é utilizar um **formulário inteligente inicial**, capaz de identificar preferências e necessidades do usuário. A partir dessas respostas, a interface reorganiza automaticamente os modos e funcionalidades da câmera, oferecendo uma experiência mais simples, eficiente e personalizada.
+O site foi pensado para demonstrar visualmente como funcionaria a ideia da câmera inteligente da JOVI, mostrando suas funcionalidades, propostas de personalização e melhorias na experiência do usuário.
+
+A página principal reúne todas as funcionalidades do projeto em um único ambiente, permitindo que o usuário tenha uma visão geral da proposta da câmera inteligente, do novo layout e das funcionalidades adaptáveis.
+
+Além disso, o sistema também possui páginas específicas dedicadas a cada funcionalidade individualmente, permitindo explicar com mais detalhes cada parte do projeto, como:
+
+- O formulário inteligente;
+- O novo layout da câmera;
+- O modo estudante;
+- E a página de testes utilizando JavaScript e manipulação de DOM.
+
+Uma das principais áreas do projeto é a aba de testes, desenvolvida com JavaScript, onde é possível simular interações e comportamentos dinâmicos da interface utilizando manipulação de elementos do DOM em tempo real.
+
+O projeto foi desenvolvido com foco em:
+- Organização visual;
+- Experiência do usuário;
+- Interatividade;
+- Responsividade;
+- E demonstração prática de conceitos de Front-End e Web Development.
 
 ---
 
